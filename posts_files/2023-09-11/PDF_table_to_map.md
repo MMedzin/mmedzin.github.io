@@ -1,7 +1,4 @@
----
-title: "From pdf table to map with location pins"
-date: 2023-09-11
----
+# From pdf table to map with location pins
 
 Recently I have done review of my wardrobe and found a bunch of clothes that I do not wear any more. They were still in good condition, so I decided to donate them to the charity. I've searched for the charity boxes in my city and found a pdf file with a table listing all clothing donation boxes in my voivodeship. Those were a lot of boxes (over two thousands), and there were just city and street addresses of them. I wanted to find one closest to my place, but definitely did not want to look up each address individually. Threrefore, I've decided to make a small script, that will parse this pdf table into pandas, query map coordinates for the addresses, and display them on a map. Here is a quick tutorial, how I've done it.
 
@@ -573,7 +570,7 @@ Now we'll use Bing maps API to get coordinates for our addresses. There are many
 
 
 ```python
-geolocator = Bing("<API-KEY>")
+geolocator = Bing("***REMOVED***")
 ```
 
 We have the geolocator set up. Now we'll add latitude and longitude columns, and fill them with coordinates from the API.
@@ -682,7 +679,7 @@ table_df.to_csv("donation_boxes_Poznan_df.csv")
 ## Showing geo locations with address info on a map
 
 Now, we can visualize  donation boxes on the map. We'll use `geopandas` and `keplergl` libraries for that.
-If you just want to test visualization method, wthout parsing pdf and querying the API, simply load [this](../posts_files/2023-09-11/donation_boxes_Poznan_df.csv) csv file.
+If you just want to test visualization method, wthout parsing pdf and querying the API, simply load the csv file.
 
 
 ```python
@@ -790,5 +787,5 @@ map
 ```
 
     User Guide: https://docs.kepler.gl/docs/keplergl-jupyter
-![png](../posts_files/2023-09-11/map_pereview.png)
 
+![png](./map_pereview.png)

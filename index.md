@@ -6,9 +6,11 @@ Hey there! I'm Michał, and this is my corner of the internet, where I share my 
 
 ## Latest Posts
 
-- [Post 1 Title](link-to-post-1) - Brief description of post content.
-- [Post 2 Title](link-to-post-2) - Brief description of post content.
-- [Post 3 Title](link-to-post-3) - Brief description of post content.
+<div class="blog-index">  
+  {% assign post = site.posts.first %}
+  {% assign content = post.content %}
+  {% include post_detail.html %}
+</div>
 
 ## About Me
 
@@ -17,15 +19,6 @@ I'm a data scientist with multiple other passions. Here's a bit about me:
 - **Name:** Michał Mędzin
 - **Professional Interests:** Data Science, Machine Learning, Python, and more.
 - **Other Interests:** Cooking, Baking, Yoga, Wim Hof Method, Drawing, and more.
-
-## Blog Categories
-
-Explore my blog by category:
-
-- Data Science
-- Python
-- Machine Learning
-- Other Interests
 
 ## Connect with Me
 

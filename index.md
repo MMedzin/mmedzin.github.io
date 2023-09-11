@@ -8,14 +8,9 @@ Hey there! I'm Michał, and this is my corner of the internet, where I share my 
 ## Latest Posts
 
 <div class="blog-index">  
-  {% assign post = site.posts.first %}
-  {% assign content = post.content %}
-  {% include post_detail.html %}
-</div>
-<div class="blog-index">  
-  {% assign post = site.posts.second %}
-  {% assign content = post.content %}
-  {% include post_detail.html %}
+{% for post in site.posts limit:3 %}
+- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
+{% endfor %}
 </div>
 
 ## About Me

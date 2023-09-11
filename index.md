@@ -7,9 +7,13 @@ Hey there! I'm Michał, and this is my corner of the internet, where I share my 
 
 ## Latest Posts
 
-{% for post in site.posts limit:3 %}
-- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
+<ul>
+  {% for post in site.posts limit:3 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
 ## About Me
 

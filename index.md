@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Welcome to my blog
 ---
 
@@ -8,6 +9,11 @@ Hey there! I'm Michał, and this is my corner of the internet, where I share my 
 
 <div class="blog-index">  
   {% assign post = site.posts.first %}
+  {% assign content = post.content %}
+  {% include post_detail.html %}
+</div>
+<div class="blog-index">  
+  {% assign post = site.posts.second %}
   {% assign content = post.content %}
   {% include post_detail.html %}
 </div>

@@ -7648,15 +7648,17 @@ all of MD as it is not optimized for dense, information rich UIs.
                     </div>
                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput"
                         data-mime-type="text/markdown">
-                        <p>Recently I have done review of my wardrobe and found a bunch of clothes that I do not wear
-                            any more. They were still in good condition, so I decided to donate them to the charity.
-                            I've searched for the charity boxes in my city and found a pdf file with a table listing all
-                            clothing donation boxes in my voivodeship. Those were a lot of boxes (over two thousands),
-                            and there were just city and street addresses of them. I wanted to find one closest to my
-                            place, but definitely did not want to look up each address individually. Threrefore, I've
-                            decided to make a small script, that will parse this pdf table into pandas, query map
-                            coordinates for the addresses, and display them on a map. Here is a quick tutorial, how I've
-                            done it.</p>
+                        <p>I recently took a deep dive into my wardrobe and discovered a bunch of clothes that I'd
+                            completely forgotten about. Instead of letting them collect dust, I decided to do a good
+                            deed and donate them to charity.
+
+                            But here's the twist: I only had a massive list of charity boxes in my voivodeship, over two
+                            thousand of them, with just city and street addresses. I didn't want to manually search each
+                            address, so I put on my tech hat and whipped up a small script. It transformed the PDF list
+                            into a handy Pandas dataset, found map coordinates for each location, and voila! I had them
+                            all displayed on a map.
+
+                            Curious how I pulled it off? Let me give you a quick tutorial on how I made it happen.</p>
                         <blockquote>
                             <p>🎓 <strong>What you'll learn below?</strong></p>
                             <ul>
@@ -8978,7 +8980,8 @@ pip<span class="w"> </span>install<span class="w"> </span>ghostscript
                         <p>Now, we can visualize donation boxes on the map. We'll use <code>geopandas</code> and
                             <code>keplergl</code> libraries for that.
                             If you just want to test visualization method, wthout parsing pdf and querying the API,
-                            simply load the csv file.
+                            simply load <a href="../../../posts_files/2023-09-11/donation_boxes_Poznan_df.csv">this csv
+                                file</a>.
                         </p>
                     </div>
                 </div>

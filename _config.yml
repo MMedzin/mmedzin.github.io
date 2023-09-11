@@ -8,7 +8,7 @@ title:              MMedzin's blog
 email:              michal.medzin@protonmail.com
 description:        Hey there! I'm Michał, and this is my corner of the internet, where I share my thoughts and projects related to data science, Python, and more. Feel free to explore and learn with me.
 author:             MMedzin
-baseurl:            "/"
+baseurl:            "/mmedzin.github.io"
 url:                "https://mmedzin.github.io"
 
 # Social Profiles

@@ -1,11 +1,8 @@
----
-title: "From pdf table to map with location pins"
-date: 2023-09-11
----
+# From pdf table to map with location pins
 
 Recently I have done review of my wardrobe and found a bunch of clothes that I do not wear any more. They were still in good condition, so I decided to donate them to the charity. I've searched for the charity boxes in my city and found a pdf file with a table listing all clothing donation boxes in my voivodeship. Those were a lot of boxes (over two thousands), and there were just city and street addresses of them. I wanted to find one closest to my place, but definitely did not want to look up each address individually. Threrefore, I've decided to make a small script, that will parse this pdf table into pandas, query map coordinates for the addresses, and display them on a map. Here is a quick tutorial, how I've done it.
 
-> 🎓 **What you'll learn below?**
+> :mortar_board: **What you'll learn below?**
 > * How to parse table from pdf document into a pandas dataframe.
 > * How to query geo coordinates for the address string in Python.
 > * How to display locations on a map in Python.
@@ -39,7 +36,7 @@ tables = camelot.read_pdf("pojemniki-wielkopolskie.pdf", pages="1-38")
 
 I've parsed pages  1-38 (not all, as is possible with "all" option) to optimize the reading process. This doucment contains over a thousend pages, but only first 38 contain information, the rest is empty.
 
-> 💡 Tip for using `camelot` on MacOS
+> :bulb: Tip for using `camelot` on MacOS
 > Camelot requires Ghostscript and Tkinter dependencies. I didn't have any problems with Tkinter installation (`brew install tcl-tk`). But Had some troubles with making Ghostscript run. I've tried multiple fixes and finally found [this Stack Overflow answer](https://stackoverflow.com/a/70182757), which have worked for me.
 > To correctly install and setup ghostscript I did:
 > ```bash
@@ -74,6 +71,19 @@ table_df.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -150,6 +160,19 @@ table_df.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -267,6 +290,19 @@ table_df.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -332,6 +368,19 @@ table_df.loc[
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -426,6 +475,19 @@ table_df.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -505,6 +567,19 @@ table_df.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -596,6 +671,19 @@ table_df.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -682,7 +770,7 @@ table_df.to_csv("donation_boxes_Poznan_df.csv")
 ## Showing geo locations with address info on a map
 
 Now, we can visualize  donation boxes on the map. We'll use `geopandas` and `keplergl` libraries for that.
-If you just want to test visualization method, wthout parsing pdf and querying the API, simply load [this](../posts_files/2023-09-11/donation_boxes_Poznan_df.csv) csv file.
+If you just want to test visualization method, wthout parsing pdf and querying the API, simply load the csv file.
 
 
 ```python
@@ -694,6 +782,19 @@ table_df.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -790,5 +891,4 @@ map
 ```
 
     User Guide: https://docs.kepler.gl/docs/keplergl-jupyter
-![png](../posts_files/2023-09-11/map_pereview.png)
-
+![png](./map_pereview.png)

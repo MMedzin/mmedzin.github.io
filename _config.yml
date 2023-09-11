@@ -1,4 +1,27 @@
-title: MMedzin's blog
-author: MMedzin
-theme: minima
-markdown: GFM
+# title: MMedzin's blog
+# author: MMedzin
+# theme: minima
+# markdown: GFM
+theme: jekyll-theme-clean-blog
+title:              MMedzin's blog
+email:              michal.medzin@protonmail.com
+description:        Hey there! I'm Michał, and this is my corner of the internet, where I share my thoughts and projects related to data science, Python, and more. Feel free to explore and learn with me.
+author:             MMedzin
+baseurl:            "/"
+url:                "https://mmedzin.github.io"
+
+# Social Profiles
+github_username:    MMedzin
+linkedin_username:  michał-mędzin
+
+# Add your google-analytics ID here to activate google analytics
+# google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site

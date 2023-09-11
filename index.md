@@ -1,7 +1,6 @@
 ---
-title
+title: Welcome to my blog
 ---
-# Welcome to my blog
 
 Hey there! I'm Michał, and this is my corner of the internet, where I share my thoughts and projects related to data science, Python, and more. Feel free to explore and learn with me.
 

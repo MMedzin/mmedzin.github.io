@@ -16,7 +16,7 @@ github_username:    MMedzin
 linkedin_username:  michał-mędzin
 
 # Add your google-analytics ID here to activate google analytics
-# google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   G-ZWGZFVNYXD # out your google-analytics code
 
 # Build settings
 markdown:           kramdown

@@ -1,28 +1,79 @@
-# title: MMedzin's blog
-# author: MMedzin
-# theme: minima
-# markdown: GFM
-# theme: jekyll-theme-clean-blog
-# remote_theme: StartBootstrap/startbootstrap-clean-blog-jekyll
-title:              MMedzin's blog
-email:              michal.medzin@protonmail.com
-description:        Hey there! I'm Michał, and this is my corner of the internet, where I share my thoughts and projects related to data science, Python, and more. Feel free to explore and learn with me.
-author:             MMedzin
-baseurl:            "/"
-url:                "https://mmedzin.github.io"
+# Site settings
+site: MMedzin's blog
+title: MMedzin's blog
+keywords: blog, data science, artificial intelligence, machine learning, python
+description: >-
+  Hey there! I'm Michał, and this is my corner of the internet, where I share my thoughts and projects related to data science, Python, and more. Feel free to explore and learn with me.
+lang: en-US
+timezone:  Europe/Warsaw
+repo: https://github.com/MMedzin/mmedzin.github.io # site repo [optional]
+# google_verify:      XXX # Put your Google Verification here
+# google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
+# discus-identifier:  XXX
 
-# Social Profiles
-github_username:    MMedzin
-linkedin_username:  michał-mędzin
+# Author settings
+author:
+  name: Michał Mędzin
+  bio: I'm a data scientist with multiple other passions.
+  picture: assets/images/profile.png 
+  github: MMedzin # github username
+  linkedin: michał-mędzin # linkedin username
+  email: michal.medzin@protonmail.com # email adress
 
-# Add your google-analytics ID here to activate google analytics
-# google_analytics:   G-ZWGZFVNYXD # out your google-analytics code
 
-# Build settings
-markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
+# URL settings
+url: "https://mmedzin.github.io" # Domain Name of host. [username].github.io for github pages
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+
 plugins:
-  - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-sitemap
+  - jekyll-relative-links
+paginate: 20
+paginate_path: "/page/:num"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: false
